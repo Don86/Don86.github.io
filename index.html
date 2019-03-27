@@ -21,32 +21,103 @@
 
     <main>
         <section class="leading">
-            <p class="leading-bigtext">Don Teng</p>
-            <p class="leading-text">Scientific software developer</p>
+          <p class="leading-bigtext">Don Teng</p>
+          <p class="leading-text">Scientific software developer</p>
         </section>
 
         <section class="cards">
-            <article>
-                <img class="article-img" src="https://github.com/Don86/Don86.github.io/blob/master/assets/preview-microscopium-min.png?raw=true" alt=" " />
-                <h1 class="article-title">
-                    Analysis of Microscopy Images
-                </h1>
-            </article>
+          <article id="article1" class="article-class">
+            <img class="article-img" src="https://github.com/Don86/Don86.github.io/blob/master/assets/preview-microscopium-min.png?raw=true" alt=" " />
+            <h1 class="article-title">
+                Analysis of Microscopy Images
+            </h1>
+          </article>
 
-            <article>
-                <img class="article-img" src="https://github.com/Don86/Don86.github.io/blob/master/assets/preview-baltic3-min.png?raw=true" alt=" " />
-                <h1 class="article-title">
-                    Baltic3
-                </h1>
-            </article>
+          <article id="article2" class="article-class">
+            <img class="article-img" src="https://github.com/Don86/Don86.github.io/blob/master/assets/preview-baltic3-min.png?raw=true" alt=" " />
+            <h1 class="article-title">
+                Baltic3
+            </h1>
+          </article>
 
-            <article>
-                <img class="article-img" src="https://github.com/Don86/Don86.github.io/blob/master/assets/preview-react-recharts-min.png?raw=true" alt=" " />
-                <h1 class="article-title">
-                    Personal Portfolio Dashboard
-                </h1>
-            </article>
+          <article id="article3" class="article-class">
+            <img class="article-img" src="https://github.com/Don86/Don86.github.io/blob/master/assets/preview-react-recharts-min.png?raw=true" alt=" " />
+            <h1 class="article-title">
+                Personal Portfolio Dashboard
+            </h1>
+          </article>
         </section>
+
+      <!-- ==================== The Modals ==================== -->
+      <div id="myModal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h1>Automated Analysis of Microscopy Images</h1>
+          <p>Some text in the Modal..</p>
+          <a href="https://www.google.com" target="_blank">Google</a>
+        </div>
+      </div>
+
+      <div id="myModal2" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h1>Baltic3: Python Visualisation Library</h1>
+          <ul>
+            <li> Originally written by Dr. Gytas Dudas, in Python2</li>
+            <li> Upgraded to streamline Newick format I/O between command line tools</li>
+          </ul>
+          <img src="./assets/GitHub-Mark-120px-plus.png" height="36" width="36"/>
+        </div>
+      </div>
+
+      <div id="myModal3" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h1>Simple Finance Portfolio Dashboard</h1>
+          <p>Modal3</p>
+        </div>
+      </div>
+
     </main>
+
+    <script>
+      var modal = document.getElementById('myModal');
+      var modal2 = document.getElementById('myModal2');
+      var modal3 = document.getElementById('myModal3');
+      // Get the button that opens the modal
+      var btn = document.getElementById("article1");
+      var btn2 = document.getElementById("article2");
+      var btn3 = document.getElementById("article3");
+      // Get the <span> element that closes the modal
+      var span = document.getElementsByClassName("close")[0];
+      var span2 = document.getElementsByClassName("close")[1];
+      var span3 = document.getElementsByClassName("close")[2];
+
+      // When the user clicks the button, open the modal 
+      btn.onclick = function() {modal.style.display = "block";}
+      btn2.onclick = function() {modal2.style.display = "block";}
+      btn3.onclick = function() {modal3.style.display = "block";}
+      // When the user clicks on <span> (x), close the modal
+      span.onclick = function() {modal.style.display = "none";}
+      span2.onclick = function() {modal2.style.display = "none";}
+      span3.onclick = function() {modal3.style.display = "none";}
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function(event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      }
+      window.onclick = function(event) {
+        if (event.target == modal2) {
+          modal2.style.display = "none";
+        }
+      }
+      window.onclick = function(event) {
+        if (event.target == modal3) {
+          modal3.style.display = "none";
+        }
+      }
+    </script>
+
 </body>
 </html>

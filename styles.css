@@ -4,7 +4,7 @@ header {
     display: flex;
     align-items: center;
 }
-@media (min-width: 700px) {
+@media (min-width: 600px) {
     .leading {
         display: flex;
         align-items: center;
@@ -40,7 +40,6 @@ header {
   height: 150px;
   margin-bottom: 20px;
   padding: 20px;
-  /*background: url('https://cdn.glitch.com/a5121e34-96b3-4a70-8227-040c51e64fae%2Fcat.jpg?1509635989509') center #333 no-repeat;*/
   background-size: cover;
   color: #454545;
   font-family: 'Playfair Display', serif;
@@ -55,7 +54,7 @@ header {
   font-weight: 900;
 }
 
-@media (min-width: 700px) {
+@media (min-width: 600px) {
   .leading-bigtext {
     font-size: 30px;
   }
@@ -68,18 +67,23 @@ header {
 }
 
 .cards {
-  max-width: 960px;
+  max-width: 900px;
   margin: 0 auto 30px;
 }
 
 article {
+  cursor: pointer; /* chance cursor to a hand to prompt click-thru */
   position: relative;
   transition: 0.3s;
   font-family: "Playfair Display", serif;
+  border-style: solid;
+  border-width: 1px;
+  border-color: lightgrey;
 }
 
 article:hover {
     box-shadow: 7px 7px 4px #aaaaaa;
+    opacity: 0.7;
 }
 
 .article-img {
@@ -92,6 +96,61 @@ article:hover {
   position: absolute;
   bottom: 0;
   width: 100%;
-  padding: 10px;
+  padding: 12px;
   background-color: rgba(255, 255, 255, 0.8);
+}
+
+/* ==================== Modal css ==================== */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {top:-300px; opacity:0} 
+  to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
 }
