@@ -53,6 +53,13 @@
           </article>
 
           <article id="article5" class="article-class">
+            <img class="article-img" src="./assets/preview-stock-viz-min.png" alt=" " />
+            <h1 class="article-title">
+                Hello, REST API World
+            </h1>
+          </article>
+
+          <article id="article6" class="article-class">
             <img class="article-img" src="./assets/in-prog.png" alt=" " />
             <h1 class="article-title">
                 Dengue in Data
@@ -62,8 +69,8 @@
         </section>
 
       <!-- ==================== The Modals ==================== -->
-      <div id="myModal" class="modal">
-        <div class="modal-content">
+      <div id="myModal1" class="modal">
+        <div class="modal-content" data-modal="myModal1">
           <span class="close">&times;</span>
           <h1>Automated Analysis of Microscopy Images</h1>
           <ul>
@@ -79,7 +86,7 @@
       </div>
 
       <div id="myModal2" class="modal">
-        <div class="modal-content">
+        <div class="modal-content" data-modal="myModal2">
           <span class="close">&times;</span>
           <h1>Baltic3: Python Visualisation Library</h1>
           <ul>
@@ -94,7 +101,7 @@
       </div>
 
       <div id="myModal3" class="modal">
-        <div class="modal-content">
+        <div class="modal-content" data-modal="myModal3">
           <span class="close">&times;</span>
           <h1>Simple Finance Portfolio Dashboard</h1>
           <ul>
@@ -110,7 +117,7 @@
       </div>
 
       <div id="myModal4" class="modal">
-        <div class="modal-content">
+        <div class="modal-content" data-modal="myModal4">
           <span class="close">&times;</span>
           <h1>Stock Visualization Dashboard</h1>
           <ul>
@@ -128,7 +135,25 @@
       </div>
 
       <div id="myModal5" class="modal">
-        <div class="modal-content">
+        <div class="modal-content" data-modal="myModal5">
+          <span class="close">&times;</span>
+          <h1>Hello, REST API World</h1>
+          <ul>
+            <li>Has basic GET, POST, PUT and DELETE functionality</li>
+            <li>Linked to a dummy database of randomly-generated users</li>
+            <li>Built with Node.js + Express</li>
+            <li>Challenge from Nils Fisher: build it with query-able API-requests? (Or rather, he said: "why would 
+            anyone do that, instead of having an additional SQL layer after the API GET request?")</li>
+          </ul>
+          <a href="https://github.com/Don86/mui-stock-dashboard" target="_blank" class="tooltip">
+            <img src="./assets/GitHub-Mark-120px-plus.png" height="32" width="32"/>
+            <span class="tooltiptext">Link to Github repo</span>
+          </a>
+        </div>
+      </div>
+
+      <div id="myModal6" class="modal">
+        <div class="modal-content" data-modal="myModal6">
           <span class="close">&times;</span>
           <h1>Dengue in Data</h1>
           <p>Visualizing the epidemiological and evolutionary characteristics of dengue. </p>
@@ -138,7 +163,45 @@
     </main>
 
     <script>
-      var modal = document.getElementById('myModal');
+      // This needs to be hardcoded...any way to automatically detect?
+      num_articles = 6
+
+      // Iterate through each article/span/Modal 
+      for (let i=1; i < num_articles+1; i++) {
+        // addEventListener to each article, by id
+        let currentModal = document.getElementById("myModal"+i)
+        document.getElementById("article"+i).addEventListener("click", function() {
+          currentModal.style.display = "block";
+          });
+
+        // addEventListener to each "&times" span element, by className "close"
+        document.getElementsByClassName("close")[i-1].addEventListener("click", function() {
+          currentModal.style.display = "none";
+        });
+
+        // addEventListener to each 
+        window.addEventListener("click", function(event) {
+          if (event.target == currentModal) {
+            currentModal.style.display = "none";
+          }
+        });
+      }
+
+
+
+
+      var btn = document.getElementsByClassName("modal");
+      console.log(btn)
+
+      for (var i=0; i < btn.length; i++) {
+        var thisBtn = btn[i]
+        thisBtn.addEventListener("click", function() {
+          var modal = document.getElementById(this.dataset.modal)
+          modal.style.display = "block"
+        }, false);
+      }
+      /*
+      var modal1 = document.getElementById('myModal1');
       var modal2 = document.getElementById('myModal2');
       var modal3 = document.getElementById('myModal3');
       var modal4 = document.getElementById('myModal4');
@@ -156,21 +219,21 @@
       var span4 = document.getElementsByClassName("close")[3];
       var span5 = document.getElementsByClassName("close")[4];
       // When the user clicks the button, open the modal
-      btn.onclick = function() {modal.style.display = "block";}
+      btn.onclick = function() {modal1.style.display = "block";}
       btn2.onclick = function() {modal2.style.display = "block";}
       btn3.onclick = function() {modal3.style.display = "block";}
       btn4.onclick = function() {modal4.style.display = "block";}
       btn5.onclick = function() {modal5.style.display = "block";}
       // When the user clicks on <span> (x), close the modal
-      span.onclick = function() {modal.style.display = "none";}
+      span.onclick = function() {modal1.style.display = "none";}
       span2.onclick = function() {modal2.style.display = "none";}
       span3.onclick = function() {modal3.style.display = "none";}
       span4.onclick = function() {modal4.style.display = "none";}
       span5.onclick = function() {modal5.style.display = "none";}
       // When the user clicks anywhere outside of the modal, close it
       window.onclick = function(event) {
-        if (event.target == modal) {
-          modal.style.display = "none";
+        if (event.target == modal1) {
+          modal1.style.display = "none";
         }
       }
       window.onclick = function(event) {
@@ -193,6 +256,7 @@
           modal5.style.display = "none";
         }
       }
+      */
     </script>
 
 </body>
