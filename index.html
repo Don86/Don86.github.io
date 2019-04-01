@@ -53,7 +53,7 @@
           </article>
 
           <article id="article5" class="article-class">
-            <img class="article-img" src="./assets/preview-stock-viz-min.png" alt=" " />
+            <img class="article-img" src="./assets/nodejs-new-pantone-black.png" alt=" " />
             <h1 class="article-title">
                 Hello, REST API World
             </h1>
@@ -145,7 +145,7 @@
             <li>Challenge from Nils Fisher: build it with query-able API-requests? (Or rather, he said: "why would 
             anyone do that, instead of having an additional SQL layer after the API GET request?")</li>
           </ul>
-          <a href="https://github.com/Don86/mui-stock-dashboard" target="_blank" class="tooltip">
+          <a href="https://github.com/Don86/tute-rest-api" target="_blank" class="tooltip">
             <img src="./assets/GitHub-Mark-120px-plus.png" height="32" width="32"/>
             <span class="tooltiptext">Link to Github repo</span>
           </a>
@@ -185,78 +185,7 @@
             currentModal.style.display = "none";
           }
         });
-      }
-
-
-
-
-      var btn = document.getElementsByClassName("modal");
-      console.log(btn)
-
-      for (var i=0; i < btn.length; i++) {
-        var thisBtn = btn[i]
-        thisBtn.addEventListener("click", function() {
-          var modal = document.getElementById(this.dataset.modal)
-          modal.style.display = "block"
-        }, false);
-      }
-      /*
-      var modal1 = document.getElementById('myModal1');
-      var modal2 = document.getElementById('myModal2');
-      var modal3 = document.getElementById('myModal3');
-      var modal4 = document.getElementById('myModal4');
-      var modal5 = document.getElementById('myModal5');
-      // Get the button that opens the modal
-      var btn = document.getElementById("article1");
-      var btn2 = document.getElementById("article2");
-      var btn3 = document.getElementById("article3");
-      var btn4 = document.getElementById("article4");
-      var btn5 = document.getElementById("article5");
-      // Get the <span> element that closes the modal
-      var span = document.getElementsByClassName("close")[0];
-      var span2 = document.getElementsByClassName("close")[1];
-      var span3 = document.getElementsByClassName("close")[2];
-      var span4 = document.getElementsByClassName("close")[3];
-      var span5 = document.getElementsByClassName("close")[4];
-      // When the user clicks the button, open the modal
-      btn.onclick = function() {modal1.style.display = "block";}
-      btn2.onclick = function() {modal2.style.display = "block";}
-      btn3.onclick = function() {modal3.style.display = "block";}
-      btn4.onclick = function() {modal4.style.display = "block";}
-      btn5.onclick = function() {modal5.style.display = "block";}
-      // When the user clicks on <span> (x), close the modal
-      span.onclick = function() {modal1.style.display = "none";}
-      span2.onclick = function() {modal2.style.display = "none";}
-      span3.onclick = function() {modal3.style.display = "none";}
-      span4.onclick = function() {modal4.style.display = "none";}
-      span5.onclick = function() {modal5.style.display = "none";}
-      // When the user clicks anywhere outside of the modal, close it
-      window.onclick = function(event) {
-        if (event.target == modal1) {
-          modal1.style.display = "none";
-        }
-      }
-      window.onclick = function(event) {
-        if (event.target == modal2) {
-          modal2.style.display = "none";
-        }
-      }
-      window.onclick = function(event) {
-        if (event.target == modal3) {
-          modal3.style.display = "none";
-        }
-      }
-      window.onclick = function(event) {
-        if (event.target == modal4) {
-          modal4.style.display = "none";
-        }
-      }
-      window.onclick = function(event) {
-        if (event.target == modal5) {
-          modal5.style.display = "none";
-        }
-      }
-      */
+      };
     </script>
 
 </body>
