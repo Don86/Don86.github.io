@@ -60,6 +60,13 @@
           </article>
 
           <article id="article6" class="article-class">
+            <img class="article-img" src="./assets/tensorboard-min.png" alt=" " />
+            <h1 class="article-title">
+                Identifying Metastatic Cancer from Small Image Scans
+            </h1>
+          </article>
+
+          <article id="article7" class="article-class">
             <img class="article-img" src="./assets/in-prog.png" alt=" " />
             <h1 class="article-title">
                 Dengue in Data
@@ -155,8 +162,23 @@
       <div id="myModal6" class="modal">
         <div class="modal-content" data-modal="myModal6">
           <span class="close">&times;</span>
+          <h1>Identifying Metastatic Cancer from Small Image Scans</h1>
+          <ul>
+            <li>Using a convolutional neural network, classify a given image into "has cancer" or "does not have cancer"</li>
+            <li>Achieved about 85% accuracy quite easily; further optimization to come. Highest public score is about 95%, with DenseNet-169.</li>
+            <li>Kaggle competition: https://www.kaggle.com/c/histopathologic-cancer-detection</li>
+          </ul>
+          <a href="https://github.com/Don86/tf-cancer-detection" target="_blank" class="tooltip">
+            <img src="./assets/GitHub-Mark-120px-plus.png" height="32" width="32"/>
+            <span class="tooltiptext">Link to Github repo</span>
+        </div>
+      </div>
+
+      <div id="myModal7" class="modal">
+        <div class="modal-content" data-modal="myModal6">
+          <span class="close">&times;</span>
           <h1>Dengue in Data</h1>
-          <p>Visualizing the epidemiological and evolutionary characteristics of dengue. </p>
+          <p>Visualizing the epidemiology of dengue.</p>
         </div>
       </div>
 
@@ -164,7 +186,7 @@
 
     <script>
       // This needs to be hardcoded...any way to automatically detect?
-      num_articles = 6
+      num_articles = 7
 
       // Iterate through each article/span/Modal 
       for (let i=1; i < num_articles+1; i++) {
