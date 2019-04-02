@@ -164,9 +164,10 @@
           <span class="close">&times;</span>
           <h1>Identifying Metastatic Cancer from Small Image Scans</h1>
           <ul>
+            <li>Data are a set of about 220,000 training (labelled) images, and 57,000 test (unlabelled) images. Each labelled image is annotated with 0 or 1, for tumour absent or present respectively.</li>
             <li>Using a convolutional neural network, classify a given image into "has cancer" or "does not have cancer"</li>
-            <li>Achieved about 85% accuracy quite easily; further optimization to come. Highest public score is about 95%, with DenseNet-169.</li>
-            <li>Kaggle competition: https://www.kaggle.com/c/histopathologic-cancer-detection</li>
+            <li>Achieved about 85% accuracy quite easily over a total runtime of less than an hour, using only a quarter of the dataset. Highest public scores are about 95%, with DenseNet-169.</li>
+            <li><a href="https://www.kaggle.com/c/histopathologic-cancer-detection">Link to Kaggle competition</a></li>
           </ul>
           <a href="https://github.com/Don86/tf-cancer-detection" target="_blank" class="tooltip">
             <img src="./assets/GitHub-Mark-120px-plus.png" height="32" width="32"/>
