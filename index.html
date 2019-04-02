@@ -81,9 +81,10 @@
           <span class="close">&times;</span>
           <h1>Automated Analysis of Microscopy Images</h1>
           <ul>
-            <li>Graduate Thesis for MSc (Bioinformatics), 2017</li>
-            <li>Used dictionary learning and compressed-sensing for feature engineering and selection</li>
-            <li>Data furnished by the Broad Institute</li>
+            <li>Given a set of breast cancer microscopy images, classify each image into its class, where <i>class</i> is the method-of-action of a potential drug treatment.</li>
+            <li>From the training set, learn a set of image features that are sufficient to reconstruct any image (the "dictionary"). During reconstruction, not all images will use all image features, so hopefully, we'll be able to distinguish between classes by the relative importance (weight) of each image feature.</li>
+            <li>About 35 - 85% accuracy, depending on run parameters and fold. Not too bad, given a naive baseline of about 8% (random selection between 12 classes)</li>
+            <li>Graduate Thesis for MSc (Bioinformatics), 2017, at Melbourne University, supervised by Juan-Nunez Iglesias. Data furnished by the Broad Institute</li>
           </ul>
           <a href="https://github.com/Don86/microscopy-image-analysis" target="_blank" class="tooltip">
             <img src="./assets/GitHub-Mark-120px-plus.png" height="32" width="32"/>
@@ -98,7 +99,7 @@
           <h1>Baltic3: Python Visualisation Library</h1>
           <ul>
             <li>Originally written by <a href="https://evogytis.github.io" target="_blank">Dr. Gytis Dudas</a>, in Python2</li>
-            <li>Migrated to Py3, upgraded to streamline Newick format I/O between command line tools</li>
+            <li>Migrated to Py3, upgraded to streamline Newick format I/O between command line tools, such as automatically parsing the output of treesub</li>
           </ul>
           <a href="https://github.com/Don86/baltic3" target="_blank" class="tooltip">
             <img src="./assets/GitHub-Mark-120px-plus.png" height="32" width="32"/>
@@ -114,7 +115,7 @@
           <ul>
             <li>Made with React.JS and recharts</li>
             <li>Visualize returns from an annuity over a selected number of years, and historical returns from a selected stock ticker</li>
-            <li>Data fetched from Alpha Vantage via axios</li>
+            <li>Monthly data fetched from Alpha Vantage via axios</li>
           </ul>
           <a href="https://github.com/Don86/react-recharts-dashboard" target="_blank" class="tooltip">
             <img src="./assets/GitHub-Mark-120px-plus.png" height="32" width="32"/>
@@ -130,7 +131,7 @@
           <ul>
             <li>Select a stock by its ticker to compute and visualize statistics like annual return, standard deviation of returns, histogram of annual returns
             </li>
-            <li>Data fetched from Alpha Vantage via axios</li>
+            <li>Monthly data fetched from Alpha Vantage via axios</li>
             <li>Stats computed generally of interest only to a passive investor (like me)</li>
             <li>Made with React.JS, recharts and Material UI</li>
           </ul>
@@ -149,8 +150,7 @@
             <li>Has basic GET, POST, PUT and DELETE functionality</li>
             <li>Linked to a dummy database of randomly-generated users</li>
             <li>Built with Node.js + Express</li>
-            <li>Challenge from Nils Fisher: build it with query-able API-requests? (Or rather, he said: "why would 
-            anyone do that, instead of having an additional SQL layer after the API GET request?")</li>
+            <li>Challenge from Nils Fisher: build it with query-able API-requests? (Or rather, he said: <i>"why would anyone do that, instead of having an additional SQL layer after the API GET request?"</i>)</li>
           </ul>
           <a href="https://github.com/Don86/tute-rest-api" target="_blank" class="tooltip">
             <img src="./assets/GitHub-Mark-120px-plus.png" height="32" width="32"/>
@@ -165,12 +165,12 @@
           <h1>Identifying Metastatic Cancer from Small Image Scans</h1>
           <ul>
             <li>Data are a set of about 220,000 training (labelled) images, and 57,000 test (unlabelled) images. Each labelled image is annotated with 0 or 1, for tumour absent or present respectively.</li>
-            <li>Using a convolutional neural network, classify a given image into "has cancer" or "does not have cancer"</li>
+            <li>Using a convolutional neural network, classify a given image into class 0 or 1.</li>
             <li>Achieved about 85% accuracy quite easily over a total runtime of less than an hour, using only a quarter of the dataset. Highest public scores are about 95%, with DenseNet-169.</li>
             <li><a href="https://www.kaggle.com/c/histopathologic-cancer-detection">Link to Kaggle competition</a></li>
           </ul>
           <a href="https://github.com/Don86/tf-cancer-detection" target="_blank" class="tooltip">
-            <img src="./assets/GitHub-Mark-120px-plus.png" height="32" width="32"/>
+            <img src="./assets/GitHub-Mark-120px-plus.png" height="32" width="32"/></a>
             <span class="tooltiptext">Link to Github repo</span>
         </div>
       </div>
