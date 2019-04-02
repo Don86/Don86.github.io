@@ -24,13 +24,14 @@ body {
 }
 
 /*header class not used*/
-header {
+/*header {
   padding: 8px;
   font-size: 0.5em;
   color: white;
   background-color: #333;
-}
+}*/
 
+/* .logo used for github icons*/
 .logo {
   height: 50px;
   margin-right: 20px;
@@ -68,6 +69,7 @@ header {
   margin: 0 auto 30px;
 }
 
+/* ==================== Article CSS ==================== */
 article {
   cursor: pointer; /* chance cursor to a hand to prompt click-thru */
   position: relative;
@@ -120,6 +122,8 @@ article:hover {
   border: 1px solid #888;
   width: 80%;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  overflow-y: auto;
+  max-height: calc(100vh - 210px);
   -webkit-animation-name: animatetop;
   -webkit-animation-duration: 0.4s;
   animation-name: animatetop;
